@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
             $table->foreignId('retailer_id')->constrained()->cascadeOnDelete();
             $table->unsignedInteger('price');
-            $table->unsignedInteger('current_stock');
+            $table->boolean('in_stock');
             $table->timestamps();
         });
     }

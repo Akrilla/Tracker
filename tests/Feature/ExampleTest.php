@@ -26,7 +26,7 @@ class ExampleTest extends TestCase
         $stock = new Stock([
             'price' => 399,
             'product_id' => $switch->id,
-            'current_stock' => 10
+            'in_stock' => true
         ]);
 
         $ebuyer->addStock($switch, $stock);

@@ -13,7 +13,7 @@ class Product extends Model
 
     public function inStock()
     {
-        return $this->stock()->where('current_stock', '>', 0)->count() > 0;
+        return $this->stock()->where('in_stock', true)->exists();
     }
 
     public function stock()
