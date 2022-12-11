@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\Models\Product;
 use App\Models\Retailer;
@@ -13,9 +13,7 @@ class ProductTest extends TestCase
 
     use RefreshDatabase;
 
-    /**
-        @test
-     */
+    /** @test */
     public function check_stock_for_products_at_retailers()
     {
         $switch = Product::create(['name' => 'Nintendo Switch']);
